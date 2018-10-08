@@ -33,14 +33,14 @@ For more information, see the
 
 ## Installation
 
-This example requires Python v3.6 or later.
+The examples were tested with Python v3.6.
 The SDK itself works with Python v2.7 or later.
 
 Download or clone this repository. Then:
 
 ````
 cd qs-python
-pip install docusign_esign pendulum flask
+pip3 install docusign_esign pendulum flask
 ````
 
 ### Configure the example's settings
