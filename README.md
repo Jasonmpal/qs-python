@@ -58,7 +58,7 @@ each of the example files:
  * **Account Id:** After logging into the [DocuSign Sandbox system](https://demo.docusign.net),
    you can copy your Account Id from the dropdown menu by your name. See the figure:
 
-   ![Figure](https://raw.githubusercontent.com/docusign/qs-02-node-send-envelope/master/documentation/account_id.png)
+   ![Figure](https://raw.githubusercontent.com/docusign/qs-python/master/documentation/account_id.png)
  * **Signer name and email:** Remember to try the DocuSign signing ceremony using both a mobile phone and a regular
    email client.
 
