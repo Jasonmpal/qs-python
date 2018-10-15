@@ -9,13 +9,13 @@ from docusign_esign import ApiClient, EnvelopesApi, EnvelopeDefinition, Signer, 
 # Fill in these constants
 #
 # Obtain an OAuth access token from https://developers.hqtest.tst/oauth-token-generator
-access_token = 'eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiNjgxODVmZjEtNGU1MS00Y2U5LWFmMWMtNjg5ODEyMjAzMzE3In0.AQkAAAABAAUABwAAdjCovyvWSAgAALZTtgIs1kgCAFCYSRTxQ4RBlE9V5f7RiHAVAAEAAAAYAAEAAAAFAAAADQAkAAAAZjBmMjdmMGUtODU3ZC00YTcxLWE0ZGEtMzJjZWNhZTNhOTc4EgACAAAABwAAAG1hbmFnZWQLAAAAaW50ZXJhY3RpdmUwAICyZqa_K9ZI.FnMoOgjl0uZgPs2wJhYuh1vvIi8Pmxebjj5SzZUmBNOLWytKqjzGMukC91NF7HJGnuLXiP2lGMLdzg4V_cyBlx7y7f2K_u6o9w71KHBLdJdcqlHyBy1tFW9t75YOTcQBhg0Snq0NhTRv_TQLTeqomre5CMEimAuYMlWCmfX5vFAKTonL7uYUdsLO8Kv_d3Qvel4-Awh4bDkbmedMpbEZyTuYzx7ABEfIw4i79YewFZXmkU9LYA_9WIgO5dpqCKje4coFDJ3KgccdVlIAo_ItBuUu_Pzr1oo22x3RMqfO1n9ZIdji0z5gAP_P_U8DnHbr0Oenig-8RQjGOZh4dhligA'
+access_token = ''
 # Obtain your accountId from demo.docusign.com -- the account id is shown in the drop down on the
 # upper right corner of the screen by your picture or the default picture. 
-account_id = '3964103'; 
+account_id = ''; 
 # Recipient Information:
 signer_name = 'Larry Smith';
-signer_email = 'larry@kluger.com';
+signer_email = 'larry@example.com';
 # The document you wish to send. Path is relative to the root directory of this repo.
 file_name_path = 'demo_documents/World_Wide_Corp_lorem.pdf';
 base_path = 'https://demo.docusign.net/restapi'
