@@ -11,10 +11,10 @@ import pprint
 # Fill in these constants
 #
 # Obtain an OAuth access token from https://developers.hqtest.tst/oauth-token-generator
-access_token = ''
+access_token = '{ACCESS_TOKEN}'
 # Obtain your accountId from demo.docusign.com -- the account id is shown in the drop down on the
 # upper right corner of the screen by your picture or the default picture. 
-account_id = ''; 
+account_id = '{ACCOUNT_ID}'; 
 base_path = 'https://demo.docusign.net/restapi'
 
 def list_envelopes():
