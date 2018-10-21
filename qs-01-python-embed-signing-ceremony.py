@@ -49,11 +49,11 @@ def embedded_signing_ceremony():
     #         One signHere tab is added.
     #         The document path supplied is relative to the working directory
     #
-    # Create the component objects for the envelope definition...
     with open(os.path.join(APP_PATH, file_name_path), "rb") as file:
         content_bytes = file.read()
     base64_file_content = base64.b64encode(content_bytes).decode('ascii')
 
+    # Create the document model
     document = Document( # create the DocuSign document object 
         document_base64 = base64_file_content, 
         name = 'Example document', # can be different from actual file name
@@ -61,15 +61,19 @@ def embedded_signing_ceremony():
         document_id = 1 # a label used to reference the doc
     )
 
+    # Create the signer recipient model 
+    signer = Signer( # The signer
+        email = signer_email, name = signer_name, recipient_id = "1", routing_order = "1",
+        client_user_id = client_user_id, # Setting the client_user_id marks the signer as embedded
+    )
+
+    # Create a sign_here tab (field on the document)
     sign_here = SignHere( # DocuSign SignHere field/tab
         document_id = '1', page_number = '1', recipient_id = '1', tab_label = 'SignHereTab',
         x_position = '195', y_position = '147')
 
-    signer = Signer( # The signer
-        email = signer_email, name = signer_name, recipient_id = "1", routing_order = "1",
-        client_user_id = client_user_id, # Setting the client_user_id marks the signer as embedded
-        tabs = Tabs(sign_here_tabs = [sign_here]) # The Tabs object wants arrays of the different field/tab types
-    )
+    # Add the tabs model (including the sign_here tab) to the signer
+    signer.tabs = Tabs(sign_here_tabs = [sign_here]) # The Tabs object wants arrays of the different field/tab types
 
     # Next, create the top level envelope definition and populate it.
     envelope_definition = EnvelopeDefinition(
