@@ -40,14 +40,17 @@ def send_document_for_signing():
         document_id = 1 # a label used to reference the doc
     )
 
+    # Create the signer recipient model 
+    signer = Signer( # The signer
+        email = signer_email, name = signer_name, recipient_id = "1", routing_order = "1")
+
+    # Create a sign_here tab (field on the document)
     sign_here = SignHere( # DocuSign SignHere field/tab
         document_id = '1', page_number = '1', recipient_id = '1', tab_label = 'SignHereTab',
         x_position = '195', y_position = '147')
 
-    signer = Signer( # The signer
-        email = signer_email, name = signer_name, recipient_id = "1", routing_order = "1",
-        tabs = Tabs(sign_here_tabs = [sign_here]) # The Tabs object wants arrays of the different field/tab types
-    )
+    # Add the tabs model (including the sign_here tab) to the signer
+    signer.tabs = Tabs(sign_here_tabs = [sign_here]) # The Tabs object wants arrays of the different field/tab types
 
     # Next, create the top level envelope definition and populate it.
     envelope_definition = EnvelopeDefinition(
