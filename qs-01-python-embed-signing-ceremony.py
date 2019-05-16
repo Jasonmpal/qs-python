@@ -9,7 +9,7 @@ from docusign_esign import ApiClient, EnvelopesApi, EnvelopeDefinition, Signer, 
 # Settings
 # Fill in these constants
 #
-# Obtain an OAuth access token from https://developers.hqtest.tst/oauth-token-generator
+# Obtain an OAuth access token from https://developers.docusign.com/oauth-token-generator
 access_token = '{ACCESS_TOKEN}'
 # Obtain your accountId from demo.docusign.com -- the account id is shown in the drop down on the
 # upper right corner of the screen by your picture or the default picture. 
